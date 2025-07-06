@@ -635,6 +635,7 @@ section {
     text-align: center;
     position: relative;
     overflow: hidden;
+    padding: 60px 0;
 }
 
 .cta-banner::before {
@@ -2840,7 +2841,7 @@ section {
 .site-footer {
     background: var(--secondary-blue);
     color: white;
-    margin-top: var(--spacing-xxl);
+   
 }
 
 .footer-main {
