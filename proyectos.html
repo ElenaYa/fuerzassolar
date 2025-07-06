@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos - Fuerzas Solar | Galería de Instalaciones Solares en México</title>
+    <meta name="description" content="Conoce nuestros proyectos de energía solar realizados en México. Instalaciones residenciales, comerciales e industriales exitosas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="nav-header sticky-nav">
+        <nav class="nav-container">
+            <figure class="logo-wrapper">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40">
+                    <circle cx="20" cy="20" r="18" fill="#f1c40f"/>
+                    <path d="M12 20 L20 12 L28 20 L20 28 Z" fill="#2c3e50"/>
+                </svg>
+                <figcaption class="logo-text">Fuerzas Solar</figcaption>
+            </figure>
+            
+            <ul class="nav-menu" role="navigation">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-label">Inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="nosotros.html" class="nav-link">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-label">Nosotros</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="servicios.html" class="nav-link">
+                        <span class="nav-icon">⚡</span>
+                        <span class="nav-label">Servicios</span>
+                    </a>
+                </li>
+                <li class="nav-item active-page">
+                    <a href="proyectos.html" class="nav-link">
+                        <span class="nav-icon">🔧</span>
+                        <span class="nav-label">Proyectos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <span class="nav-icon">📰</span>
+                        <span class="nav-label">Blog</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="contacto.html" class="nav-link">
+                        <span class="nav-icon">📞</span>
+                        <span class="nav-label">Contacto</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <button class="mobile-toggle" aria-label="Menú móvil">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="page-hero projects-hero">
+            <div class="container-wide">
+                <header class="hero-content">
+                    <h1 class="page-title">
+                        <span class="title-accent">Nuestros</span>
+                        <span class="title-main">Proyectos</span>
+                    </h1>
+                    <p class="page-subtitle">Descubre las instalaciones solares que han transformado la vida de nuestros clientes</p>
+                </header>
+            </div>
+        </section>
+
+        <section class="projects-filter">
+            <div class="container-wide">
+                <nav class="filter-controls" role="tablist">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">
+                        <span class="filter-icon">📊</span>
+                        <span class="filter-text">Todos</span>
+                        <span class="filter-count">24</span>
+                    </button>
+                    <button class="filter-btn" data-filter="residential" role="tab">
+                        <span class="filter-icon">🏡</span>
+                        <span class="filter-text">Residencial</span>
+                        <span class="filter-count">15</span>
+                    </button>
+                    <button class="filter-btn" data-filter="commercial" role="tab">
+                        <span class="filter-icon">🏢</span>
+                        <span class="filter-text">Comercial</span>
+                        <span class="filter-count">6</span>
+                    </button>
+                    <button class="filter-btn" data-filter="industrial" role="tab">
+                        <span class="filter-icon">🏭</span>
+                        <span class="filter-text">Industrial</span>
+                        <span class="filter-count">3</span>
+                    </button>
+                </nav>
+            </div>
+        </section>
+
+        <section class="projects-gallery">
+            <div class="container-wide">
+                <div class="gallery-grid" id="projectsGrid">
+                    <!-- Featured Project -->
+                    <article class="project-card featured-project" data-category="commercial">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop" 
+                                 alt="Centro comercial con sistema solar" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">250kW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">85% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="plaza-milenium">Ver Detalles</button>
+                            </div>
+                            <span class="project-badge featured">Proyecto Destacado</span>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h2 class="project-title">Plaza Milenium</h2>
+                                <div class="project-meta">
+                                    <span class="project-location">Guadalajara, Jalisco</span>
+                                    <time class="project-date">2024</time>
+                                </div>
+                            </header>
+                            
+                            <div class="project-summary">
+                                <p class="project-description">Instalación de 250kW en centro comercial, reduciendo costos operativos en 85% y estableciendo un nuevo estándar de sustentabilidad.</p>
+                                
+                                <div class="project-metrics">
+                                    <div class="metric-item">
+                                        <span class="metric-label">Paneles</span>
+                                        <span class="metric-value">680</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-label">Área</span>
+                                        <span class="metric-value">3,200m²</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-label">CO₂ evitado</span>
+                                        <span class="metric-value">187 ton/año</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Residential Projects -->
+                    <article class="project-card" data-category="residential">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" 
+                                 alt="Casa residencial con paneles solares" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">8kW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">92% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="casa-gonzalez">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Casa González</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">Monterrey, N.L.</span>
+                                    <time class="project-date">2024</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Sistema residencial que redujo la factura eléctrica de $3,500 a solo $280 pesos mensuales.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="residential">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop" 
+                                 alt="Residencia con sistema solar integrado" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">12kW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">88% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="villa-satelite">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Villa Satélite</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">CDMX</span>
+                                    <time class="project-date">2024</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Instalación con almacenamiento que permite independencia energética total durante el día.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="residential">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=600&h=400&fit=crop" 
+                                 alt="Casa moderna con paneles solares" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">6kW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">95% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="residencial-cumbres">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Residencial Cumbres</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">Querétaro, Qro.</span>
+                                    <time class="project-date">2023</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Proyecto que incluyó optimización de consumo y sistema solar personalizado.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="residential">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?w=600&h=400&fit=crop" 
+                                 alt="Casa suburbana con instalación solar" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">10kW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">90% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="casa-puebla">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Casa Puebla</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">Puebla, Pue.</span>
+                                    <time class="project-date">2023</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Sistema híbrido con respaldo de baterías para toda la familia.</p>
+                        </div>
+                    </article>
+
+                    <!-- Commercial Projects -->
+                    <article class="project-card" data-category="commercial">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=600&h=400&fit=crop" 
+                                 alt="Empresa con sistema solar comercial" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">150kW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">78% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="corporativo-tech">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Corporativo TechMex</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">CDMX</span>
+                                    <time class="project-date">2024</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Oficinas corporativas que ahora operan con energía 100% renovable.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="commercial">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop" 
+                                 alt="Hotel con paneles solares" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">200kW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">82% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="hotel-riviera">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Hotel Riviera</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">Cancún, Q.R.</span>
+                                    <time class="project-date">2023</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Resort eco-friendly que redujo significativamente sus costos operativos.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="commercial">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" 
+                                 alt="Edificio comercial con sistema solar" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">95kW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">75% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="centro-medico">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Centro Médico Salud</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">Guadalajara, Jal.</span>
+                                    <time class="project-date">2023</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Clínica con sistema de respaldo energético para garantizar operaciones críticas.</p>
+                        </div>
+                    </article>
+
+                    <!-- Industrial Projects -->
+                    <article class="project-card" data-category="industrial">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=600&h=400&fit=crop" 
+                                 alt="Planta industrial con sistema solar" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">2MW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">65% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="manufactura-bajio">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Manufactura del Bajío</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">León, Gto.</span>
+                                    <time class="project-date">2023</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Planta manufacturera con instalación solar de 2MW que transformó su operación.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="industrial">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop" 
+                                 alt="Almacén logístico con paneles solares" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">1.5MW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">70% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="logistica-norte">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Logística Norte</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">Tijuana, B.C.</span>
+                                    <time class="project-date">2022</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Centro de distribución con uno de los sistemas solares más grandes del noroeste.</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="industrial">
+                        <figure class="project-visual">
+                            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop" 
+                                 alt="Fábrica con instalación solar masiva" class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-stats">
+                                    <span class="stat-item">
+                                        <span class="stat-icon">⚡</span>
+                                        <span class="stat-value">3MW</span>
+                                    </span>
+                                    <span class="stat-item">
+                                        <span class="stat-icon">💰</span>
+                                        <span class="stat-value">60% ahorro</span>
+                                    </span>
+                                </div>
+                                <button class="view-details-btn" data-project="textil-puebla">Ver Detalles</button>
+                            </div>
+                        </figure>
+                        
+                        <div class="project-content">
+                            <header class="project-header">
+                                <h3 class="project-title">Textil Puebla</h3>
+                                <div class="project-meta">
+                                    <span class="project-location">Puebla, Pue.</span>
+                                    <time class="project-date">2022</time>
+                                </div>
+                            </header>
+                            
+                            <p class="project-description">Industria textil que lidera en sustentabilidad con 3MW de energía solar.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="gallery-actions">
+                    <button class="load-more-btn" id="loadMoreProjects">
+                        <span class="btn-text">Cargar Más Proyectos</span>
+                        <span class="btn-icon">📁</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-impact">
+            <div class="container-wide">
+                <header class="section-header centered">
+                    <h2 class="section-title">Impacto de Nuestros Proyectos</h2>
+                    <p class="section-intro">Resultados tangibles que transforman comunidades</p>
+                </header>
+
+                <div class="impact-dashboard">
+                    <article class="impact-metric">
+                        <figure class="metric-visual">
+                            <span class="metric-icon">🏠</span>
+                            <div class="metric-animation">
+                                <span class="pulse-ring"></span>
+                            </div>
+                        </figure>
+                        <div class="metric-data">
+                            <span class="metric-number">1,547</span>
+                            <span class="metric-label">Proyectos Completados</span>
+                            <span class="metric-subtitle">Desde 2018</span>
+                        </div>
+                    </article>
+
+                    <article class="impact-metric">
+                        <figure class="metric-visual">
+                            <span class="metric-icon">⚡</span>
+                            <div class="metric-animation">
+                                <span class="pulse-ring"></span>
+                            </div>
+                        </figure>
+                        <div class="metric-data">
+                            <span class="metric-number">47.3MW</span>
+                            <span class="metric-label">Capacidad Instalada</span>
+                            <span class="metric-subtitle">Energía limpia generada</span>
+                        </div>
+                    </article>
+
+                    <article class="impact-metric">
+                        <figure class="metric-visual">
+                            <span class="metric-icon">💰</span>
+                            <div class="metric-animation">
+                                <span class="pulse-ring"></span>
+                            </div>
+                        </figure>
+                        <div class="metric-data">
+                            <span class="metric-number">$127M</span>
+                            <span class="metric-label">Ahorros Generados</span>
+                            <span class="metric-subtitle">Para nuestros clientes</span>
+                        </div>
+                    </article>
+
+                    <article class="impact-metric">
+                        <figure class="metric-visual">
+                            <span class="metric-icon">🌱</span>
+                            <div class="metric-animation">
+                                <span class="pulse-ring"></span>
+                            </div>
+                        </figure>
+                        <div class="metric-data">
+                            <span class="metric-number">35,520</span>
+                            <span class="metric-label">Toneladas CO₂ Evitadas</span>
+                            <span class="metric-subtitle">Equivale a 7,500 autos menos</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="client-testimonials projects-testimonials">
+            <div class="container-narrow">
+                <header class="section-header centered">
+                    <h2 class="section-title">Testimonios de Proyectos</h2>
+                </header>
+
+                <div class="testimonials-slider">
+                    <article class="testimonial-slide active" data-slide="1">
+                        <blockquote class="testimonial-content">
+                            <p>"El sistema solar de Fuerzas Solar transformó completamente nuestros costos operativos. En 8 meses recuperamos la inversión y ahora ahorramos más de $150,000 pesos mensuales."</p>
+                            <footer class="testimonial-attribution">
+                                <cite class="client-name">Ing. Patricia Herrera</cite>
+                                <span class="client-title">Directora Operativa</span>
+                                <span class="client-company">Plaza Milenium, Guadalajara</span>
+                            </footer>
+                        </blockquote>
+                        <figure class="testimonial-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                        </figure>
+                    </article>
+
+                    <article class="testimonial-slide" data-slide="2">
+                        <blockquote class="testimonial-content">
+                            <p>"Excelente trabajo desde el diseño hasta la instalación. Nuestro hotel ahora es carbono neutral y nuestros huéspedes valoran mucho nuestro compromiso ambiental."</p>
+                            <footer class="testimonial-attribution">
+                                <cite class="client-name">Lic. Roberto Sánchez</cite>
+                                <span class="client-title">Gerente General</span>
+                                <span class="client-company">Hotel Riviera, Cancún</span>
+                            </footer>
+                        </blockquote>
+                        <figure class="testimonial-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                        </figure>
+                    </article>
+
+                    <article class="testimonial-slide" data-slide="3">
+                        <blockquote class="testimonial-content">
+                            <p>"La instalación en nuestra planta ha sido un éxito total. Reducimos costos energéticos en 65% y mejoramos nuestra imagen corporativa significativamente."</p>
+                            <footer class="testimonial-attribution">
+                                <cite class="client-name">Ing. Marco González</cite>
+                                <span class="client-title">Director de Producción</span>
+                                <span class="client-company">Manufactura del Bajío, León</span>
+                            </footer>
+                        </blockquote>
+                        <figure class="testimonial-rating">
+                            <span class="stars">⭐⭐⭐⭐⭐</span>
+                        </figure>
+                    </article>
+                </div>
+
+                <nav class="testimonials-nav">
+                    <button class="nav-dot active" data-slide="1" aria-label="Testimonial 1"></button>
+                    <button class="nav-dot" data-slide="2" aria-label="Testimonial 2"></button>
+                    <button class="nav-dot" data-slide="3" aria-label="Testimonial 3"></button>
+                </nav>
+            </div>
+        </section>
+
+        <aside class="cta-banner projects-cta">
+            <div class="container-narrow">
+                <header class="cta-content">
+                    <h2 class="cta-title">
+                        <span class="cta-highlight">¿Te inspiran nuestros proyectos?</span>
+                        <span class="cta-subtitle">Tu proyecto podría ser el próximo en nuestra galería</span>
+                    </h2>
+                    <div class="cta-actions">
+                        <a href="contacto.html" class="cta-primary solar-btn">
+                            <span class="btn-text">Iniciar Mi Proyecto</span>
+                            <span class="btn-icon">🚀</span>
+                        </a>
+                        <a href="servicios.html" class="cta-secondary">Ver Nuestros Servicios</a>
+                    </div>
+                </header>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Project Detail Modal -->
+    <div class="project-modal" id="projectModal" style="display: none;">
+        <div class="modal-overlay" id="modalOverlay"></div>
+        <article class="modal-content">
+            <header class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Título del Proyecto</h2>
+                <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+            </header>
+            
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be loaded dynamically -->
+            </div>
+        </article>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="container-wide">
+                <section class="footer-grid">
+                    <article class="footer-company">
+                        <header class="company-info">
+                            <h3 class="company-name">Fuerzas Solar</h3>
+                            <p class="company-mission">Liderando la transición hacia un México más sustentable con energía solar de calidad.</p>
+                        </header>
+                        <address class="company-contact">
+                            <p>Av. Paseo de la Reforma 123<br>Ciudad de México, CDMX</p>
+                            <p>Tel: +52 55 1234 5678</p>
+                        </address>
+                    </article>
+
+                    <nav class="footer-nav">
+                        <h4 class="nav-title">Navegación</h4>
+                        <ul class="footer-links">
+                            <li><a href="/" class="footer-link">Inicio</a></li>
+                            <li><a href="nosotros.html" class="footer-link">Nosotros</a></li>
+                            <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                            <li><a href="proyectos.html" class="footer-link">Proyectos</a></li>
+                            <li><a href="blog.html" class="footer-link">Blog</a></li>
+                            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+                        </ul>
+                    </nav>
+
+                    <section class="footer-social">
+                        <h4 class="social-title">Síguenos</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                            <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container-wide">
+                <p class="copyright">&copy; 2025 Fuerzas Solar. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
