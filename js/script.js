@@ -1024,4 +1024,3 @@ document.head.appendChild(style);
 
 // Console welcome message
 console.log('%c🌞 Fuerzas Solar - Energía Renovable para México', 'color: #f1c40f; font-size: 16px; font-weight: bold;');
-console.log('%cSitio web desarrollado con tecnologías modernas y optimizado para la mejor experiencia de usuario.', 'color: #2c3e50; font-size: 14px;');
