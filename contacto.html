@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Fuerzas Solar | Cotización Gratuita de Energía Solar</title>
+    <meta name="description" content="Contáctanos para una cotización gratuita de tu sistema de energía solar. Oficinas en Ciudad de México. Tel: +52 55 1234 5678">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="nav-header sticky-nav">
+        <nav class="nav-container">
+            <figure class="logo-wrapper">
+                <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40">
+                    <circle cx="20" cy="20" r="18" fill="#f1c40f"/>
+                    <path d="M12 20 L20 12 L28 20 L20 28 Z" fill="#2c3e50"/>
+                </svg>
+                <figcaption class="logo-text">Fuerzas Solar</figcaption>
+            </figure>
+            
+            <ul class="nav-menu" role="navigation">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <span class="nav-icon">🏠</span>
+                        <span class="nav-label">Inicio</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="nosotros.html" class="nav-link">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-label">Nosotros</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="servicios.html" class="nav-link">
+                        <span class="nav-icon">⚡</span>
+                        <span class="nav-label">Servicios</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="proyectos.html" class="nav-link">
+                        <span class="nav-icon">🔧</span>
+                        <span class="nav-label">Proyectos</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">
+                        <span class="nav-icon">📰</span>
+                        <span class="nav-label">Blog</span>
+                    </a>
+                </li>
+                <li class="nav-item active-page">
+                    <a href="contacto.html" class="nav-link">
+                        <span class="nav-icon">📞</span>
+                        <span class="nav-label">Contacto</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <button class="mobile-toggle" aria-label="Menú móvil">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="page-hero contact-hero">
+            <div class="container-wide">
+                <header class="hero-content">
+                    <h1 class="page-title">
+                        <span class="title-accent">Contáctanos</span>
+                        <span class="title-main">Hoy</span>
+                    </h1>
+                    <p class="page-subtitle">Obtén tu cotización gratuita y comienza a ahorrar con energía solar</p>
+                </header>
+            </div>
+        </section>
+
+        <section class="contact-main">
+            <div class="container-wide">
+                <div class="contact-layout">
+                    <div class="contact-form-section">
+                        <header class="form-section-header">
+                            <h2 class="section-title">Solicita tu Cotización Gratuita</h2>
+                            <p class="section-intro">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas</p>
+                        </header>
+
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">Nombre *</label>
+                                    <input type="text" id="firstName" name="firstName" class="form-input" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Apellidos *</label>
+                                    <input type="text" id="lastName" name="lastName" class="form-input" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone" class="form-label">Teléfono *</label>
+                                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="+52 55 1234 5678" required>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="address" class="form-label">Dirección Completa *</label>
+                                    <input type="text" id="address" name="address" class="form-input" placeholder="Calle, Número, Colonia, Ciudad, Estado" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="propertyType" class="form-label">Tipo de Propiedad *</label>
+                                    <select id="propertyType" name="propertyType" class="form-input" required>
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="casa">Casa</option>
+                                        <option value="departamento">Departamento</option>
+                                        <option value="oficina">Oficina</option>
+                                        <option value="comercio">Comercio</option>
+                                        <option value="industria">Industria</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="monthlyBill" class="form-label">Factura Mensual Promedio *</label>
+                                    <select id="monthlyBill" name="monthlyBill" class="form-input" required>
+                                        <option value="">Selecciona un rango</option>
+                                        <option value="500-1000">$500 - $1,000 MXN</option>
+                                        <option value="1000-2500">$1,000 - $2,500 MXN</option>
+                                        <option value="2500-5000">$2,500 - $5,000 MXN</option>
+                                        <option value="5000-10000">$5,000 - $10,000 MXN</option>
+                                        <option value="10000+">Más de $10,000 MXN</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="roofType" class="form-label">Tipo de Techo</label>
+                                    <select id="roofType" name="roofType" class="form-input">
+                                        <option value="">Selecciona una opción</option>
+                                        <option value="concreto">Losa de concreto</option>
+                                        <option value="lamina">Lámina metálica</option>
+                                        <option value="teja">Teja</option>
+                                        <option value="otro">Otro</option>
+                                        <option value="no-se">No estoy seguro</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="timeframe" class="form-label">¿Cuándo te gustaría instalar?</label>
+                                    <select id="timeframe" name="timeframe" class="form-input">
+                                        <option value="">Selecciona un periodo</option>
+                                        <option value="inmediato">Lo antes posible</option>
+                                        <option value="1-3-meses">En 1-3 meses</option>
+                                        <option value="3-6-meses">En 3-6 meses</option>
+                                        <option value="6-12-meses">En 6-12 meses</option>
+                                        <option value="mas-12-meses">Más de 12 meses</option>
+                                        <option value="solo-info">Solo quiero información</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <label for="message" class="form-label">Mensaje Adicional</label>
+                                    <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Cuéntanos más detalles sobre tu proyecto o cualquier pregunta específica..."></textarea>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="newsletter" name="newsletter" class="form-checkbox">
+                                        <label for="newsletter" class="checkbox-label">
+                                            Quiero recibir noticias y ofertas especiales sobre energía solar
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group full-width">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="privacy" name="privacy" class="form-checkbox" required>
+                                        <label for="privacy" class="checkbox-label">
+                                            Acepto los <a href="#" class="privacy-link">términos y condiciones</a> y autorizo el tratamiento de mis datos personales *
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="form-submit-btn" id="submitBtn">
+                                    <span class="btn-text">Enviar Solicitud</span>
+                                    <span class="btn-icon">📧</span>
+                                </button>
+                                
+                                <div class="form-security">
+                                    <span class="security-icon">🔒</span>
+                                    <span class="security-text">Tus datos están protegidos y no serán compartidos</span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <aside class="contact-info-section">
+                        <div class="contact-info-card">
+                            <header class="info-card-header">
+                                <h3 class="card-title">Información de Contacto</h3>
+                                <p class="card-subtitle">Múltiples formas de ponerte en contacto con nosotros</p>
+                            </header>
+
+                            <div class="contact-methods">
+                                <article class="contact-method">
+                                    <figure class="method-icon">
+                                        <span class="icon">📍</span>
+                                    </figure>
+                                    <div class="method-content">
+                                        <h4 class="method-title">Dirección</h4>
+                                        <address class="method-details">
+                                            Av. Paseo de la Reforma 123<br>
+                                            Ciudad de México, CDMX<br>
+                                            C.P. 06600
+                                        </address>
+                                    </div>
+                                </article>
+
+                                <article class="contact-method">
+                                    <figure class="method-icon">
+                                        <span class="icon">📞</span>
+                                    </figure>
+                                    <div class="method-content">
+                                        <h4 class="method-title">Teléfono</h4>
+                                        <div class="method-details">
+                                            <a href="tel:+525512345678" class="contact-link">+52 55 1234 5678</a>
+                                            <span class="availability">Lun-Sáb 8:00-18:00</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="contact-method">
+                                    <figure class="method-icon">
+                                        <span class="icon">📧</span>
+                                    </figure>
+                                    <div class="method-content">
+                                        <h4 class="method-title">Email</h4>
+                                        <div class="method-details">
+                                            <a href="mailto:contacto@fuerzassolar.com" class="contact-link">contacto@fuerzassolar.com</a>
+                                            <span class="response-time">Respuesta en 24 hrs</span>
+                                        </div>
+                                    </div>
+                                </article>
+
+                                <article class="contact-method">
+                                    <figure class="method-icon">
+                                        <span class="icon">💬</span>
+                                    </figure>
+                                    <div class="method-content">
+                                        <h4 class="method-title">WhatsApp</h4>
+                                        <div class="method-details">
+                                            <a href="https://wa.me/525512345678" class="contact-link" target="_blank">+52 55 1234 5678</a>
+                                            <span class="availability">Atención inmediata</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+
+                        <div class="quick-stats-card">
+                            <header class="stats-header">
+                                <h3 class="card-title">¿Por qué elegirnos?</h3>
+                            </header>
+                            
+                            <div class="quick-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">1,500+</span>
+                                    <span class="stat-label">Proyectos completados</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">98%</span>
+                                    <span class="stat-label">Clientes satisfechos</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">7 años</span>
+                                    <span class="stat-label">De experiencia</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">25 años</span>
+                                    <span class="stat-label">Garantía integral</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="urgency-card">
+                            <header class="urgency-header">
+                                <span class="urgency-icon">⚡</span>
+                                <h3 class="urgency-title">¿Necesitas Atención Urgente?</h3>
+                            </header>
+                            
+                            <div class="urgency-content">
+                                <p class="urgency-text">Para emergencias o consultas urgentes, llámanos directamente:</p>
+                                <a href="tel:+525512345678" class="urgency-phone">📞 +52 55 1234 5678</a>
+                                <span class="urgency-hours">Disponible 24/7 para emergencias</span>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <blockquote class="testimonial-quote">
+                                <p>"El proceso fue muy sencillo. Desde la cotización hasta la instalación, todo fue profesional y transparente. Recomiendo totalmente a Fuerzas Solar."</p>
+                                <footer class="testimonial-attribution">
+                                    <cite class="client-name">María González</cite>
+                                    <span class="client-location">Cliente satisfecha, Guadalajara</span>
+                                </footer>
+                            </blockquote>
+                            <div class="testimonial-rating">
+                                <span class="stars">⭐⭐⭐⭐⭐</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="office-location">
+            <div class="container-wide">
+                <header class="section-header centered">
+                    <h2 class="section-title">Visítanos en Nuestra Oficina</h2>
+                    <p class="section-intro">Estamos ubicados en el corazón de la Ciudad de México</p>
+                </header>
+
+                <div class="location-content">
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <div class="map-content">
+                                <span class="map-icon">🗺️</span>
+                                <h3 class="map-title">Mapa Interactivo</h3>
+                                <p class="map-description">Av. Paseo de la Reforma 123<br>Ciudad de México, CDMX</p>
+                                <button class="map-button">Ver en Google Maps</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-details">
+                        <div class="location-info">
+                            <h3 class="location-title">Oficina Principal</h3>
+                            <address class="location-address">
+                                Av. Paseo de la Reforma 123<br>
+                                Colonia Juárez<br>
+                                Ciudad de México, CDMX<br>
+                                C.P. 06600, México
+                            </address>
+
+                            <div class="office-hours">
+                                <h4 class="hours-title">Horarios de Atención</h4>
+                                <ul class="hours-list">
+                                    <li class="hours-item">
+                                        <span class="day">Lunes a Viernes</span>
+                                        <span class="time">8:00 AM - 6:00 PM</span>
+                                    </li>
+                                    <li class="hours-item">
+                                        <span class="day">Sábados</span>
+                                        <span class="time">9:00 AM - 2:00 PM</span>
+                                    </li>
+                                    <li class="hours-item">
+                                        <span class="day">Domingos</span>
+                                        <span class="time">Cerrado</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="transport-info">
+                                <h4 class="transport-title">Cómo Llegar</h4>
+                                <ul class="transport-list">
+                                    <li class="transport-item">
+                                        <span class="transport-icon">🚇</span>
+                                        <span class="transport-text">Metro: Estación Hidalgo (Líneas 2 y 3)</span>
+                                    </li>
+                                    <li class="transport-item">
+                                        <span class="transport-icon">🚌</span>
+                                        <span class="transport-text">Metrobús: Estación Reforma</span>
+                                    </li>
+                                    <li class="transport-item">
+                                        <span class="transport-icon">🚗</span>
+                                        <span class="transport-text">Estacionamiento disponible</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-faq">
+            <div class="container-narrow">
+                <header class="section-header centered">
+                    <h2 class="section-title">Preguntas Frecuentes</h2>
+                    <p class="section-intro">Respuestas rápidas a las consultas más comunes</p>
+                </header>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Cuánto tiempo toma recibir una cotización?</summary>
+                        <div class="faq-answer">
+                            <p>Normalmente enviamos cotizaciones personalizadas en menos de 24 horas. Para proyectos complejos, el proceso puede tomar hasta 48-72 horas para garantizar la precisión de los cálculos.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">¿La evaluación inicial tiene algún costo?</summary>
+                        <div class="faq-answer">
+                            <p>No, todas nuestras evaluaciones iniciales y cotizaciones son completamente gratuitas y sin compromiso. Solo cobramos cuando decides proceder con la instalación.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Ofrecen financiamiento para el sistema?</summary>
+                        <div class="faq-answer">
+                            <p>Sí, ofrecemos múltiples opciones de financiamiento incluyendo pagos a meses sin intereses, créditos blandos y opciones de arrendamiento solar. Nuestros asesores te ayudarán a encontrar la mejor opción para tu situación.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Qué incluye la garantía del sistema?</summary>
+                        <div class="faq-answer">
+                            <p>Ofrecemos garantía integral de 25 años que incluye paneles solares, inversores, estructura de montaje y mano de obra. Además, garantizamos el rendimiento energético del sistema.</p>
+                        </div>
+                    </details>
+
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Realizan instalaciones en toda la República?</summary>
+                        <div class="faq-answer">
+                            <p>Sí, realizamos instalaciones en toda la República Mexicana. Contamos con equipos certificados en las principales ciudades y nos desplazamos a ubicaciones remotas según el tamaño del proyecto.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Success Message Modal -->
+    <div class="success-modal" id="successModal" style="display: none;">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="success-content">
+                <span class="success-icon">✅</span>
+                <h2 class="success-title">¡Mensaje Enviado!</h2>
+                <p class="success-message">Gracias por contactarnos. Hemos recibido tu solicitud y nos pondremos en contacto contigo en menos de 24 horas.</p>
+                <button class="success-close" id="successClose">Continuar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="container-wide">
+                <section class="footer-grid">
+                    <article class="footer-company">
+                        <header class="company-info">
+                            <h3 class="company-name">Fuerzas Solar</h3>
+                            <p class="company-mission">Liderando la transición hacia un México más sustentable con energía solar de calidad.</p>
+                        </header>
+                        <address class="company-contact">
+                            <p>Av. Paseo de la Reforma 123<br>Ciudad de México, CDMX</p>
+                            <p>Tel: +52 55 1234 5678</p>
+                        </address>
+                    </article>
+
+                    <nav class="footer-nav">
+                        <h4 class="nav-title">Navegación</h4>
+                        <ul class="footer-links">
+                            <li><a href="/" class="footer-link">Inicio</a></li>
+                            <li><a href="nosotros.html" class="footer-link">Nosotros</a></li>
+                            <li><a href="servicios.html" class="footer-link">Servicios</a></li>
+                            <li><a href="proyectos.html" class="footer-link">Proyectos</a></li>
+                            <li><a href="blog.html" class="footer-link">Blog</a></li>
+                            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+                        </ul>
+                    </nav>
+
+                    <section class="footer-social">
+                        <h4 class="social-title">Síguenos</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+                            <a href="#" class="social-link" aria-label="YouTube">📺</a>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container-wide">
+                <p class="copyright">&copy; 2025 Fuerzas Solar. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
