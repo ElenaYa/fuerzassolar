@@ -1315,37 +1315,80 @@ section {
 }
 
 .project-card {
-    background: white;
+    background: var(--background-white);
     border-radius: var(--border-radius-lg);
     overflow: hidden;
-    box-shadow: 0 8px 30px var(--shadow-light);
-    transition: var(--transition-medium);
+    box-shadow: 0 4px 12px var(--shadow-light);
+    transition: all var(--transition-medium);
+    position: relative;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px var(--shadow-medium);
-}
-
-.featured-project {
-    grid-column: 1 / -1;
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px var(--shadow-medium);
 }
 
 .project-visual {
     position: relative;
     overflow: hidden;
+    aspect-ratio: 16/9;
 }
 
 .project-image {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 0;
-    transition: var(--transition-medium);
+    transition: transform var(--transition-medium);
 }
 
 .project-card:hover .project-image {
     transform: scale(1.05);
+}
+
+.project-content {
+    padding: var(--spacing-md);
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        var(--background-white) 100%
+    );
+    transform: translateY(0);
+    transition: transform var(--transition-medium);
+}
+
+.project-card:hover .project-content {
+    transform: translateY(-4px);
+}
+
+.project-title {
+    color: var(--secondary-blue);
+    margin-bottom: var(--spacing-xs);
+    transition: color var(--transition-fast);
+}
+
+.project-card:hover .project-title {
+    color: var(--primary-yellow);
+}
+
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.project-description {
+    color: var(--text-dark);
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+    transition: opacity var(--transition-fast);
+}
+
+.project-card:hover .project-description {
+    opacity: 1;
 }
 
 .project-overlay {
@@ -1666,7 +1709,7 @@ section {
 /* Articles Grid */
 .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: var(--spacing-xl);
 }
 

@@ -475,20 +475,6 @@ function filterProjects(filter, projectCards) {
     });
 }
 
-function loadMoreProjects() {
-    // This would typically load more projects from an API
-    // For now, we'll just simulate it
-    const loadMoreBtn = document.getElementById('loadMoreProjects');
-    if (loadMoreBtn) {
-        loadMoreBtn.innerHTML = '<span class="loading-spinner"></span> Cargando...';
-        loadMoreBtn.disabled = true;
-        
-        setTimeout(() => {
-            loadMoreBtn.innerHTML = '<span class="btn-text">Cargar Más Proyectos</span><span class="btn-icon">📁</span>';
-            loadMoreBtn.disabled = false;
-        }, 2000);
-    }
-}
 
 /* ==========================================================================
    Testimonial Slider
