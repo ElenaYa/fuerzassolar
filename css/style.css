@@ -1,9 +1,4 @@
-/* ==========================================================================
-   Fuerzas Solar - Main Stylesheet
-   Modern Solar Energy Website - Complete CSS
-   ========================================================================== */
 
-/* CSS Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +10,7 @@
     box-sizing: border-box;
 }
 
-/* CSS Variables - Solar Modern Theme */
 :root {
-    /* Colors */
     --primary-yellow: #f1c40f;
     --secondary-blue: #2c3e50;
     --background-white: #ffffff;
@@ -29,20 +22,17 @@
     --shadow-medium: rgba(0, 0, 0, 0.15);
     --shadow-dark: rgba(0, 0, 0, 0.25);
     
-    /* Gradients */
     --gradient-solar: linear-gradient(135deg, var(--primary-yellow), #f39c12);
     --gradient-sky: linear-gradient(135deg, #3498db, var(--secondary-blue));
     --gradient-overlay: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.5));
     
-    /* Typography */
     --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-weight-light: 300;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
-    
-    /* Spacing */
+   
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 1.5rem;
@@ -50,20 +40,18 @@
     --spacing-xl: 3rem;
     --spacing-xxl: 4rem;
     
-    /* Layout */
+
     --container-wide: 1200px;
     --container-narrow: 800px;
     --nav-height: 80px;
     --border-radius: 8px;
     --border-radius-lg: 16px;
     
-    /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-medium: 0.3s ease;
     --transition-slow: 0.5s ease;
 }
 
-/* Base HTML and Body */
 html {
     font-size: 16px;
     scroll-behavior: smooth;
@@ -78,7 +66,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-semibold);
     line-height: 1.3;
@@ -112,7 +99,6 @@ img {
     border-radius: var(--border-radius);
 }
 
-/* Container Layouts */
 .container-wide {
     width: 100%;
     max-width: 1200px;
@@ -127,7 +113,6 @@ img {
     padding: 0 20px;
 }
 
-/* Navigation Header */
 .nav-header {
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
@@ -171,7 +156,6 @@ img {
     transform: scale(1.05);
 }
 
-/* Remove old logo styles */
 .logo-icon,
 .logo-text {
     display: none;
@@ -223,13 +207,11 @@ img {
     transition: var(--transition-fast);
 }
 
-/* Main Content */
 .main-content {
     margin-top: var(--nav-height);
     min-height: calc(100vh - var(--nav-height));
 }
 
-/* Page Heroes */
 .page-hero {
     background: var(--gradient-sky);
     color: white;
@@ -277,7 +259,6 @@ img {
     margin: 0 auto;
 }
 
-/* Hero Banner (Homepage) */
 .solar-hero {
     position: relative;
     padding: 0;
@@ -383,7 +364,6 @@ img {
     color: var(--secondary-blue);
 }
 
-/* Section Styling */
 section {
     padding: var(--spacing-xxl) 0;
 }
@@ -427,7 +407,6 @@ section {
     margin: 0 auto;
 }
 
-/* Benefits Section */
 .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -510,7 +489,6 @@ section {
     color: var(--primary-yellow);
 }
 
-/* Process Timeline */
 .process-timeline {
     list-style: none;
     position: relative;
@@ -578,7 +556,6 @@ section {
     font-size: 0.9rem;
 }
 
-/* Testimonials */
 .testimonials-carousel {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -635,7 +612,6 @@ section {
     font-size: 1.2rem;
 }
 
-/* CTA Banner */
 .cta-banner {
     background: var(--gradient-sky);
     color: white;
@@ -693,7 +669,6 @@ section {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* About Page Styles */
 .company-story {
     background: #f8f9fa;
 }
@@ -741,7 +716,6 @@ section {
     display: block;
 }
 
-/* Values Grid */
 .values-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -889,7 +863,6 @@ section {
     font-weight: var(--font-weight-medium);
 }
 
-/* Stats Dashboard */
 .stats-dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -938,7 +911,6 @@ section {
     font-weight: var(--font-weight-medium);
 }
 
-/* Certifications */
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -974,7 +946,6 @@ section {
     font-size: 0.9rem;
 }
 
-/* Services Page */
 .services-catalog {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1084,7 +1055,6 @@ section {
     }
 }
 
-/* Calculator */
 .calculator-form {
     background: white;
     padding: var(--spacing-xl);
@@ -1180,7 +1150,6 @@ section {
     color: var(--secondary-blue);
 }
 
-/* Financing Options */
 .financing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1265,7 +1234,6 @@ section {
     color: var(--text-light);
 }
 
-/* Projects Page */
 .projects-filter {
     background: #f8f9fa;
     padding: var(--spacing-lg) 0;
@@ -1307,7 +1275,6 @@ section {
     font-size: 0.8rem;
 }
 
-/* Gallery Grid */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1490,7 +1457,6 @@ section {
     color: var(--secondary-blue);
 }
 
-/* Impact Dashboard */
 .impact-dashboard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1548,7 +1514,6 @@ section {
     margin-top: var(--spacing-xs);
 }
 
-/* Testimonials Slider */
 .testimonials-slider {
     position: relative;
 }
@@ -1587,7 +1552,6 @@ section {
     background: var(--primary-yellow);
 }
 
-/* Blog Page */
 .blog-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -1731,7 +1695,6 @@ section {
     font-size: 0.8rem;
 }
 
-/* Pagination */
 .pagination-nav {
     display: flex;
     justify-content: center;
@@ -1814,7 +1777,6 @@ section {
     margin-bottom: var(--spacing-md);
 }
 
-/* Newsletter Form */
 .newsletter-form {
     display: flex;
     flex-direction: column;
@@ -1881,7 +1843,6 @@ section {
     font-size: 0.8rem;
 }
 
-/* Popular Articles */
 .popular-articles {
     display: flex;
     flex-direction: column;
@@ -1930,7 +1891,6 @@ section {
     font-size: 0.8rem;
 }
 
-/* CTA Widget */
 .widget-cta {
     text-align: center;
     background: var(--gradient-sky);
@@ -1966,7 +1926,6 @@ section {
     transform: translateY(-2px);
 }
 
-/* Contact Page */
 .contact-layout {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -1980,7 +1939,6 @@ section {
     box-shadow: 0 8px 30px var(--shadow-light);
 }
 
-/* Contact Form */
 .contact-form {
     margin-top: var(--spacing-lg);
 }
@@ -2089,7 +2047,6 @@ section {
     font-size: 0.9rem;
 }
 
-/* Contact Info Cards */
 .contact-info-section {
     display: flex;
     flex-direction: column;
@@ -2163,7 +2120,6 @@ section {
     margin-top: var(--spacing-xs);
 }
 
-/* Quick Stats */
 .quick-stats {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -4652,7 +4608,6 @@ button:focus,
     margin: 0 2px;
 }
 
-/* Hover effects for interactive icons */
 a:hover .nav-icon,
 a:hover .icon,
 a:hover .btn-icon,
@@ -4661,12 +4616,10 @@ a:hover .phone-icon {
     transition: transform 0.2s ease;
 }
 
-/* Active page icon highlight */
 .active-page .nav-icon {
     stroke: #f1c40f;
 }
 
-/* Responsive container adjustments */
 @media screen and (max-width: 768px) {
     .container-wide,
     .container-narrow {
@@ -4680,7 +4633,6 @@ a:hover .phone-icon {
         padding: 0 12px;
     }
 
-    /* Adjust page sections for small screens */
     .page-hero {
         padding: 40px 0;
     }
@@ -4693,7 +4645,6 @@ a:hover .phone-icon {
         grid-gap: 24px;
     }
 
-    /* Form adjustments */
     .form-grid {
         grid-gap: 16px;
     }
@@ -4708,7 +4659,6 @@ a:hover .phone-icon {
         font-size: 14px;
     }
 
-    /* Contact info cards */
     .contact-info-card,
     .quick-stats-card,
     .urgency-card,
@@ -4725,7 +4675,6 @@ a:hover .phone-icon {
         padding: 12px;
     }
 
-    /* Stats adjustments */
     .quick-stats {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -4739,7 +4688,6 @@ a:hover .phone-icon {
         font-size: 24px;
     }
 
-    /* FAQ section */
     .faq-list {
         gap: 12px;
     }
@@ -4748,7 +4696,6 @@ a:hover .phone-icon {
         padding: 12px;
     }
 
-    /* Office location section */
     .office-location {
         padding: 30px 0;
     }
@@ -4761,7 +4708,6 @@ a:hover .phone-icon {
         height: 250px;
     }
 
-    /* Section headers */
     .section-title {
         font-size: 24px;
         margin-bottom: 12px;
@@ -4772,7 +4718,6 @@ a:hover .phone-icon {
         margin-bottom: 24px;
     }
 
-    /* Form actions */
     .form-actions {
         padding-top: 20px;
     }
@@ -4782,7 +4727,6 @@ a:hover .phone-icon {
         font-size: 14px;
     }
 
-    /* Success modal */
     .modal-content {
         padding: 20px;
         margin: 20px;

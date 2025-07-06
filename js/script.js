@@ -1,9 +1,4 @@
-/* ==========================================================================
-   Fuerzas Solar - Main JavaScript
-   Interactive functionality for the solar energy website
-   ========================================================================== */
 
-// DOM Ready function
 function ready(fn) {
     if (document.readyState !== 'loading') {
         fn();
@@ -12,7 +7,6 @@ function ready(fn) {
     }
 }
 
-// Initialize all functionality when DOM is ready
 ready(() => {
     initializeNavigation();
     initializeContactForm();
@@ -25,9 +19,7 @@ ready(() => {
     initializeSmoothScrolling();
 });
 
-/* ==========================================================================
-   Navigation Functionality
-   ========================================================================== */
+
 
 function initializeNavigation() {
     const mobileToggle = document.querySelector('.mobile-toggle');
@@ -35,12 +27,10 @@ function initializeNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     if (mobileToggle && navMenu) {
-        // Mobile menu toggle
         mobileToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileToggle.classList.toggle('active');
             
-            // Animate hamburger lines
             const lines = mobileToggle.querySelectorAll('.hamburger-line');
             lines.forEach((line, index) => {
                 if (mobileToggle.classList.contains('active')) {
@@ -54,7 +44,6 @@ function initializeNavigation() {
             });
         });
 
-        // Close mobile menu when clicking nav links
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
@@ -68,7 +57,6 @@ function initializeNavigation() {
             });
         });
 
-        // Close mobile menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
                 navMenu.classList.remove('active');
@@ -83,7 +71,6 @@ function initializeNavigation() {
         });
     }
 
-    // Add scroll effect to navigation
     let lastScrollTop = 0;
     const header = document.querySelector('.nav-header');
     
@@ -92,10 +79,8 @@ function initializeNavigation() {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
             if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down
                 header.style.transform = 'translateY(-100%)';
             } else {
-                // Scrolling up
                 header.style.transform = 'translateY(0)';
             }
             
@@ -104,9 +89,6 @@ function initializeNavigation() {
     }
 }
 
-/* ==========================================================================
-   Contact Form Functionality
-   ========================================================================== */
 
 function initializeContactForm() {
     const contactForm = document.getElementById('contactForm');
@@ -118,23 +100,18 @@ function initializeContactForm() {
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            // Validate form
             if (!validateContactForm(contactForm)) {
                 return;
             }
 
-            // Show loading state
             showLoadingState(submitBtn);
 
             try {
-                // Simulate form submission
                 await simulateFormSubmission();
                 
-                // Show success message or redirect
                 if (successModal) {
                     showSuccessModal();
                 } else {
-                    // Redirect to thank you page
                     window.location.href = '/gracias.html';
                 }
                 
@@ -147,13 +124,11 @@ function initializeContactForm() {
         });
     }
 
-    // Success modal close functionality
     if (successClose && successModal) {
         successClose.addEventListener('click', () => {
             hideSuccessModal();
         });
         
-        // Close modal when clicking overlay
         successModal.addEventListener('click', (e) => {
             if (e.target === successModal) {
                 hideSuccessModal();
@@ -173,13 +148,11 @@ function validateContactForm(form) {
         } else {
             clearFieldError(field);
             
-            // Email validation
             if (field.type === 'email' && !isValidEmail(field.value)) {
                 showFieldError(field, 'Por favor, ingresa un email válido');
                 isValid = false;
             }
             
-            // Phone validation
             if (field.type === 'tel' && !isValidPhone(field.value)) {
                 showFieldError(field, 'Por favor, ingresa un teléfono válido');
                 isValid = false;
@@ -262,7 +235,6 @@ function hideSuccessModal() {
 }
 
 function showErrorMessage(message) {
-    // Create error notification
     const errorDiv = document.createElement('div');
     errorDiv.className = 'error-notification';
     errorDiv.style.cssText = `
@@ -280,15 +252,12 @@ function showErrorMessage(message) {
     
     document.body.appendChild(errorDiv);
     
-    // Remove after 5 seconds
     setTimeout(() => {
         errorDiv.remove();
     }, 5000);
 }
 
-/* ==========================================================================
-   Calculator Functionality
-   ========================================================================== */
+
 
 function initializeCalculator() {
     const calculatorForm = document.getElementById('savingsCalculator');
@@ -301,7 +270,6 @@ function initializeCalculator() {
         });
     }
 
-    // Real-time calculation
     const calculatorInputs = calculatorForm?.querySelectorAll('input, select');
     calculatorInputs?.forEach(input => {
         input.addEventListener('change', () => {
@@ -327,7 +295,6 @@ function calculateSavings() {
     
     if (!monthlyBill) return;
 
-    // Calculation factors based on location and roof type
     const locationFactors = {
         'cdmx': 0.85,
         'jalisco': 0.90,
@@ -346,27 +313,21 @@ function calculateSavings() {
     const locationFactor = locationFactors[location] || 0.82;
     const roofFactor = roofFactors[roofType] || 0.85;
     
-    // Calculate system size needed (approximate)
     const systemSizeKW = Math.ceil((monthlyBill * 12) / 1500); // Rough estimate
     
-    // Calculate savings
     const monthlySavings = Math.round(monthlyBill * locationFactor * roofFactor * 0.85);
     const yearlySavings = monthlySavings * 12;
     const lifetimeSavings = yearlySavings * 25;
     
-    // Estimate investment
-    const pricePerKW = 25000; // MXN per kW
+    const pricePerKW = 25000; 
     const estimatedInvestment = systemSizeKW * pricePerKW;
     
-    // Calculate payback period
     const paybackPeriod = Math.round((estimatedInvestment / yearlySavings) * 10) / 10;
     
-    // Calculate CO2 avoided (approximate)
-    const co2PerKWh = 0.458; // kg CO2 per kWh in Mexico
-    const annualProduction = systemSizeKW * 1500; // kWh per year
-    const co2Avoided = Math.round((annualProduction * co2PerKWh) / 1000); // tons per year
+    const co2PerKWh = 0.458; 
+    const annualProduction = systemSizeKW * 1500; 
+    const co2Avoided = Math.round((annualProduction * co2PerKWh) / 1000); 
 
-    // Update results
     updateCalculatorResults({
         monthlySavings,
         yearlySavings,
@@ -381,7 +342,6 @@ function updateCalculatorResults(results) {
     const resultsContainer = document.getElementById('calculatorResults');
     if (!resultsContainer) return;
 
-    // Format currency
     const formatCurrency = (amount) => {
         return new Intl.NumberFormat('es-MX', {
             style: 'currency',
@@ -391,7 +351,6 @@ function updateCalculatorResults(results) {
         }).format(amount);
     };
 
-    // Update values
     const elements = {
         monthlySavings: document.getElementById('monthlySavings'),
         yearlySavings: document.getElementById('yearlySavings'),
@@ -408,11 +367,9 @@ function updateCalculatorResults(results) {
     if (elements.paybackPeriod) elements.paybackPeriod.textContent = `${results.paybackPeriod} años`;
     if (elements.co2Avoided) elements.co2Avoided.textContent = `${results.co2Avoided} ton`;
 
-    // Show results with animation
     resultsContainer.style.display = 'block';
     resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     
-    // Add animation class
     resultsContainer.style.opacity = '0';
     resultsContainer.style.transform = 'translateY(20px)';
     
@@ -423,9 +380,6 @@ function updateCalculatorResults(results) {
     }, 100);
 }
 
-/* ==========================================================================
-   Project Filter Functionality
-   ========================================================================== */
 
 function initializeProjectFilter() {
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -435,16 +389,13 @@ function initializeProjectFilter() {
         button.addEventListener('click', () => {
             const filter = button.dataset.filter;
             
-            // Update active button
             filterButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             
-            // Filter projects
             filterProjects(filter, projectCards);
         });
     });
 
-    // Load more projects functionality
     const loadMoreBtn = document.getElementById('loadMoreProjects');
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', () => {
@@ -460,7 +411,6 @@ function filterProjects(filter, projectCards) {
         
         if (shouldShow) {
             card.style.display = 'block';
-            // Animate in
             setTimeout(() => {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
@@ -476,9 +426,7 @@ function filterProjects(filter, projectCards) {
 }
 
 
-/* ==========================================================================
-   Testimonial Slider
-   ========================================================================== */
+
 
 function initializeTestimonialSlider() {
     const slides = document.querySelectorAll('.testimonial-slide');
@@ -487,12 +435,10 @@ function initializeTestimonialSlider() {
 
     if (slides.length === 0) return;
 
-    // Auto-advance slides
     const slideInterval = setInterval(() => {
         nextSlide();
     }, 5000);
 
-    // Navigation dots
     navDots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             goToSlide(index);
@@ -506,18 +452,15 @@ function initializeTestimonialSlider() {
     }
 
     function goToSlide(slideIndex) {
-        // Hide all slides
         slides.forEach(slide => slide.classList.remove('active'));
         navDots.forEach(dot => dot.classList.remove('active'));
         
-        // Show current slide
         slides[slideIndex].classList.add('active');
         navDots[slideIndex]?.classList.add('active');
         
         currentSlide = slideIndex;
     }
 
-    // Pause on hover
     const sliderContainer = document.querySelector('.testimonials-slider');
     if (sliderContainer) {
         sliderContainer.addEventListener('mouseenter', () => {
@@ -532,9 +475,6 @@ function initializeTestimonialSlider() {
     }
 }
 
-/* ==========================================================================
-   Newsletter Subscription
-   ========================================================================== */
 
 function initializeNewsletterForm() {
     const newsletterForm = document.getElementById('newsletterForm');
@@ -551,13 +491,11 @@ function initializeNewsletterForm() {
                 return;
             }
             
-            // Show loading state
             const originalBtnContent = submitBtn.innerHTML;
             submitBtn.innerHTML = '<span class="loading-spinner"></span> Suscribiendo...';
             submitBtn.disabled = true;
             
             try {
-                // Simulate subscription
                 await new Promise(resolve => setTimeout(resolve, 1500));
                 
                 showNotification('¡Te has suscrito exitosamente! Recibirás noticias sobre energía solar.', 'success');
@@ -599,19 +537,15 @@ function showNotification(message, type = 'info') {
     
     document.body.appendChild(notification);
     
-    // Remove after 5 seconds
     setTimeout(() => {
         notification.style.animation = 'slideOutRight 0.3s ease';
         setTimeout(() => notification.remove(), 300);
     }, 5000);
 }
 
-/* ==========================================================================
-   Scroll Effects and Animations
-   ========================================================================== */
+
 
 function initializeScrollEffects() {
-    // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -625,7 +559,6 @@ function initializeScrollEffects() {
         });
     }, observerOptions);
 
-    // Observe elements for animation
     const animatedElements = document.querySelectorAll(`
         .sol-benefit, .service-card, .project-card, .blog-article,
         .stat-card, .team-member, .testimonial-card, .value-pillar
@@ -635,7 +568,6 @@ function initializeScrollEffects() {
         observer.observe(el);
     });
 
-    // Counter animation for statistics
     const counters = document.querySelectorAll('.stat-number, .metric-number');
     const counterObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -650,7 +582,6 @@ function initializeScrollEffects() {
         counterObserver.observe(counter);
     });
 
-    // Parallax effect for hero images
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const heroImages = document.querySelectorAll('.hero-image');
@@ -668,7 +599,7 @@ function animateCounter(element) {
     
     if (isNaN(number)) return;
     
-    const duration = 2000; // 2 seconds
+    const duration = 2000; 
     const steps = 60;
     const increment = number / steps;
     let current = 0;
@@ -680,10 +611,8 @@ function animateCounter(element) {
             clearInterval(timer);
         }
         
-        // Format the number and preserve any text
         let formattedNumber = Math.floor(current).toLocaleString('es-MX');
         
-        // Handle special cases
         if (text.includes('MW')) {
             formattedNumber = (current).toFixed(1);
         } else if (text.includes('$') && text.includes('M')) {
@@ -698,12 +627,8 @@ function animateCounter(element) {
     }, duration / steps);
 }
 
-/* ==========================================================================
-   Modal Functionality
-   ========================================================================== */
 
 function initializeModals() {
-    // Project detail modals
     const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
     const projectModal = document.getElementById('projectModal');
     const modalClose = document.getElementById('modalClose');
@@ -724,7 +649,6 @@ function initializeModals() {
         modalOverlay.addEventListener('click', hideProjectModal);
     }
 
-    // Escape key to close modals
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             hideProjectModal();
@@ -740,7 +664,6 @@ function showProjectModal(projectId) {
     
     if (!modal) return;
 
-    // This would typically fetch project details from an API
     const projectData = getProjectData(projectId);
     
     if (modalTitle) modalTitle.textContent = projectData.title;
@@ -759,7 +682,6 @@ function hideProjectModal() {
 }
 
 function getProjectData(projectId) {
-    // Mock project data - in a real app this would come from an API
     const projects = {
         'plaza-milenium': {
             title: 'Plaza Milenium - Guadalajara',
@@ -801,7 +723,6 @@ function getProjectData(projectId) {
                 </div>
             `
         },
-        // Add more project data as needed
         'casa-gonzalez': {
             title: 'Casa González - Monterrey',
             content: `
@@ -837,12 +758,8 @@ function getProjectData(projectId) {
     };
 }
 
-/* ==========================================================================
-   Smooth Scrolling and Utility Functions
-   ========================================================================== */
 
 function initializeSmoothScrolling() {
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -856,7 +773,6 @@ function initializeSmoothScrolling() {
         });
     });
 
-    // Back to top functionality
     const backToTopBtn = createBackToTopButton();
     
     window.addEventListener('scroll', () => {
@@ -913,11 +829,7 @@ function createBackToTopButton() {
     return btn;
 }
 
-/* ==========================================================================
-   Additional Interactive Features
-   ========================================================================== */
 
-// Social sharing functionality
 function shareOnSocial(platform, url, text) {
     const shareUrls = {
         facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
@@ -930,7 +842,6 @@ function shareOnSocial(platform, url, text) {
     }
 }
 
-// Initialize social sharing buttons
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains('social-share')) {
         e.preventDefault();
@@ -941,9 +852,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Form field enhancements
 document.querySelectorAll('.form-input, .form-textarea').forEach(input => {
-    // Add floating label effect
     input.addEventListener('focus', () => {
         input.parentNode.classList.add('focused');
     });
@@ -954,13 +863,11 @@ document.querySelectorAll('.form-input, .form-textarea').forEach(input => {
         }
     });
     
-    // Check if already has value on page load
     if (input.value) {
         input.parentNode.classList.add('focused');
     }
 });
 
-// Add CSS animations
 const style = document.createElement('style');
 style.textContent = `
     @keyframes slideInRight {
@@ -1008,5 +915,4 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Console welcome message
 console.log('%c🌞 Fuerzas Solar - Energía Renovable para México', 'color: #f1c40f; font-size: 16px; font-weight: bold;');
