@@ -114,15 +114,17 @@ img {
 
 /* Container Layouts */
 .container-wide {
-    max-width: var(--container-wide);
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 var(--spacing-sm);
+    padding: 0 20px;
 }
 
 .container-narrow {
-    max-width: var(--container-narrow);
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 var(--spacing-sm);
+    padding: 0 20px;
 }
 
 /* Navigation Header */
@@ -4541,5 +4543,213 @@ button:focus,
     
     .contact-value {
         grid-column: 1 / -1;
+    }
+}
+
+/* SVG Icon Styles */
+.nav-icon,
+.icon,
+.btn-icon,
+.security-icon,
+.urgency-icon,
+.phone-icon,
+.success-icon {
+    display: inline-block;
+    vertical-align: middle;
+    stroke: currentColor;
+}
+
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 8px;
+}
+
+.security-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    stroke: #2ecc71;
+}
+
+.urgency-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 12px;
+    stroke: #e74c3c;
+}
+
+.phone-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    stroke: currentColor;
+}
+
+.success-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+}
+
+.star-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+}
+
+/* Hover effects for interactive icons */
+a:hover .nav-icon,
+a:hover .icon,
+a:hover .btn-icon,
+a:hover .phone-icon {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+}
+
+/* Active page icon highlight */
+.active-page .nav-icon {
+    stroke: #f1c40f;
+}
+
+/* Responsive container adjustments */
+@media screen and (max-width: 768px) {
+    .container-wide,
+    .container-narrow {
+        padding: 0 16px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container-wide,
+    .container-narrow {
+        padding: 0 12px;
+    }
+
+    /* Adjust page sections for small screens */
+    .page-hero {
+        padding: 40px 0;
+    }
+
+    .contact-main {
+        padding: 30px 0;
+    }
+
+    .contact-layout {
+        grid-gap: 24px;
+    }
+
+    /* Form adjustments */
+    .form-grid {
+        grid-gap: 16px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .form-input,
+    .form-textarea {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Contact info cards */
+    .contact-info-card,
+    .quick-stats-card,
+    .urgency-card,
+    .testimonial-card {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .contact-methods {
+        gap: 16px;
+    }
+
+    .contact-method {
+        padding: 12px;
+    }
+
+    /* Stats adjustments */
+    .quick-stats {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .stat-item {
+        padding: 12px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    /* FAQ section */
+    .faq-list {
+        gap: 12px;
+    }
+
+    .faq-item {
+        padding: 12px;
+    }
+
+    /* Office location section */
+    .office-location {
+        padding: 30px 0;
+    }
+
+    .location-content {
+        gap: 24px;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    /* Section headers */
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .section-intro {
+        font-size: 14px;
+        margin-bottom: 24px;
+    }
+
+    /* Form actions */
+    .form-actions {
+        padding-top: 20px;
+    }
+
+    .form-submit-btn {
+        padding: 10px 16px;
+        font-size: 14px;
+    }
+
+    /* Success modal */
+    .modal-content {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    .success-title {
+        font-size: 20px;
+    }
+
+    .success-message {
+        font-size: 14px;
     }
 }
