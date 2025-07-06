@@ -3428,7 +3428,7 @@ button:focus,
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: var(--spacing-xxl);
-    max-width: 1000px;
+    max-width: 1200px;
 }
 
 /* Legal Document */
